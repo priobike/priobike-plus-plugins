@@ -95,6 +95,9 @@ CMMotionManager *_motionManager;
 void _initMotionManager(void) {
   if (!_motionManager) {
     _motionManager = [[CMMotionManager alloc] init];
+    _motionManager.accelerometerUpdateInterval = 1;
+    _motionManager.gyroUpdateInterval = 1;
+    _motionManager.deviceMotionUpdateInterval = 1;
   }
 }
 

@@ -19,7 +19,7 @@ internal class StreamHandlerImpl(
 
     override fun onListen(arguments: Any?, events: EventSink) {
         sensorEventListener = createSensorEventListener(events)
-        sensorManager.registerListener(sensorEventListener, sensor, 10000)
+        sensorManager.registerListener(sensorEventListener, sensor, SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     override fun onCancel(arguments: Any?) {
